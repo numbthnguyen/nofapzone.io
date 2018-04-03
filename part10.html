@@ -64,11 +64,11 @@ function create ()
     //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
     platforms.create(400, 568, 'ground').setScale(2).refreshBody();
 
-    //  Now let's create some ledges
-    platforms.create(150, 250, 'ground');
-    platforms.create(100, 250, 'ground');
-    platforms.create(50, 250, 'ground');
-    platforms.create(0, 250, 'ground');
+    //  Now let's create some ledges (x, y)
+    platforms.create(150, 400, 'ground');
+    platforms.create(100, 350, 'ground');
+    platforms.create(50, 300, 'ground');
+    platforms.create(0, 200, 'ground');
 
     // The player and its settings
     player = this.physics.add.sprite(100, 450, 'dude');
