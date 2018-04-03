@@ -1,6 +1,6 @@
-<!doctype html> 
-<html lang="en"> 
-<head> 
+<!doctype html>
+<html lang="en">
+<head>
     <meta charset="UTF-8" />
     <title>Making your first Phaser 3 Game - Part 10</title>
     <script src="//cdn.jsdelivr.net/npm/phaser@3.1.1/dist/phaser.js"></script>
@@ -65,9 +65,10 @@ function create ()
     platforms.create(400, 568, 'ground').setScale(2).refreshBody();
 
     //  Now let's create some ledges
-    platforms.create(600, 400, 'ground');
+    platforms.create(150, 250, 'ground');
+    platforms.create(100, 250, 'ground');
     platforms.create(50, 250, 'ground');
-    platforms.create(750, 220, 'ground');
+    platforms.create(0, 250, 'ground');
 
     // The player and its settings
     player = this.physics.add.sprite(100, 450, 'dude');
