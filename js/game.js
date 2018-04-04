@@ -11,3 +11,17 @@ let config = {
  
 // create the game, and pass it the configuration
 let game = new Phaser.Game(config);
+
+// load asset files for our game
+gameScene.preload = function() {
+ 
+  // load images
+  this.load.image('onodera', 'assets/onodera.jpg');
+};
+ 
+// executed once, after assets were loaded
+gameScene.create = function() {
+ 
+   // background
+   this.add.sprite(0, 0, 'background');
+}
