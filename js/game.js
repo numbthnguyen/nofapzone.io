@@ -29,7 +29,7 @@ gameScene.create = function() {
   boundaries.createMultiple(12, 'block', 0, true);
 
   // change origin to the center of the sprite
-  bg.alignIn(0, 0, config.width, config.height, Phaser.CENTER);
+  bg.align(0, 0, config.width, config.height, Phaser.CENTER);
 
     //  Align all of the sprites around the picture
     boundaries.getChildAt(1).alignTo(pic, Phaser.TOP_LEFT);
