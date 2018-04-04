@@ -29,16 +29,15 @@ gameScene.create = function() {
   boundaries.createMultiple(12, 'block', 0, true);
 
     //  Align all of the sprites around the picture
-    boundaries.getChildAt(1).alignTo(pic, Phaser.TOP_LEFT);
-    boundaries.getChildAt(2).alignTo(pic, Phaser.TOP_CENTER);
-    boundaries.getChildAt(3).alignTo(pic, Phaser.TOP_RIGHT);
-    boundaries.getChildAt(4).alignTo(pic, Phaser.LEFT_TOP);
-    boundaries.getChildAt(5).alignTo(pic, Phaser.LEFT_CENTER);
-    boundaries.getChildAt(6).alignTo(pic, Phaser.LEFT_BOTTOM);
-    boundaries.getChildAt(7).alignTo(pic, Phaser.RIGHT_TOP);
-    boundaries.getChildAt(8).alignTo(pic, Phaser.RIGHT_CENTER);
-    boundaries.getChildAt(9).alignTo(pic, Phaser.RIGHT_BOTTOM);
-    boundaries.getChildAt(10).alignTo(pic, Phaser.BOTTOM_LEFT);
-    boundaries.getChildAt(11).alignTo(pic, Phaser.BOTTOM_CENTER);
-    boundaries.getChildAt(12).alignTo(pic, Phaser.BOTTOM_RIGHT);
-}
+    boundaries.getChildren(1).alignTo(pic, Phaser.TOP_LEFT);
+    boundaries.getChildren(2).alignTo(pic, Phaser.TOP_CENTER);
+    boundaries.getChildren(3).alignTo(pic, Phaser.TOP_RIGHT);
+    boundaries.getChildren(4).alignTo(pic, Phaser.LEFT_TOP);
+    boundaries.getChildren(5).alignTo(pic, Phaser.LEFT_CENTER);
+    boundaries.getChildren(6).alignTo(pic, Phaser.LEFT_BOTTOM);
+    boundaries.getChildren(7).alignTo(pic, Phaser.RIGHT_TOP);
+    boundaries.getChildren(8).alignTo(pic, Phaser.RIGHT_CENTER);
+    boundaries.getChildren(9).alignTo(pic, Phaser.RIGHT_BOTTOM);
+    boundaries.getChildren(10).alignTo(pic, Phaser.BOTTOM_LEFT);
+    boundaries.getChildren(11).alignTo(pic, Phaser.BOTTOM_CENTER);
+    boundaries.getChildren(12).alignTo(pic, Phaser.BOTTOM_RIGHT);}
