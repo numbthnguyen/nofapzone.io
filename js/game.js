@@ -25,8 +25,10 @@ gameScene.create = function() {
  
   // background
   let bg = this.add.sprite(this.sys.game.config.width/2, this.sys.game.config.height/2, 'onodera');
-  let boundaries = this.add.group();
-  boundaries.createMultiple(12, 'block');
+  let boundaries = this.add.group({
+  	key: 'block',
+  	repeat: 12
+  });
 
     //  Align all of the sprites around the picture
     console.log(boundaries);
