@@ -31,10 +31,8 @@ gameScene.create = function() {
   });
 
     //  Align all of the sprites around the picture
-    console.log(boundaries);
-    console.log(boundaries.getChildren());
     console.log(boundaries.getChildren()[0]);
-    boundaries.getChildren()[0].Align.To(bg, Phaser.TOP_LEFT);
+    boundaries.getChildren()[0].alignTo(bg, Phaser.TOP_LEFT);
     boundaries.getChildren(2).Align.To(bg, Phaser.TOP_CENTER);
     boundaries.getChildren(3).Align.To(bg, Phaser.TOP_RIGHT);
     boundaries.getChildren(4).Align.To(bg, Phaser.LEFT_TOP);
