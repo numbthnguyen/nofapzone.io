@@ -5,7 +5,7 @@ let gameScene = new Phaser.Scene('Game');
 let config = {
   type: Phaser.AUTO,  //Phaser will decide how to render our game (WebGL or Canvas)
   width: 640, // game width
-  height: 360, // game height
+  height: 800, // game height
   scene: gameScene // our newly created scene
 };
  
