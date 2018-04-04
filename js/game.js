@@ -29,4 +29,7 @@ gameScene.create = function() {
   bg.setOrigin(0,0);
   bg.height = game.height;
   bg.width = game.width;
+  console.log(bg);
+  console.log(game);
+  console.log(config);
 }
