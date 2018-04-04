@@ -27,8 +27,8 @@ gameScene.create = function() {
 
   // change origin to the top-left of the sprite
   bg.setOrigin(0,0);
-  bg.height = config.height;
-  bg.width = config.width;
+  bg.displayHeight = config.height;
+  bg.displayWidth = config.width;
   console.log(bg);
   console.log(game);
   console.log(config);
