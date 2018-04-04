@@ -27,5 +27,6 @@ gameScene.create = function() {
 
   // change origin to the top-left of the sprite
   bg.setOrigin(0,0);
-  bg.scale.setTo(640,800);
+  bg.height = game.height;
+  bg.width = game.width;
 }
