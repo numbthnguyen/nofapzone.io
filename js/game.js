@@ -26,5 +26,6 @@ gameScene.create = function() {
    let bg = this.add.sprite(0, 0, 'onodera');
 
   // change origin to the top-left of the sprite
-  bg.setOrigin(0,0);   
+  bg.setOrigin(0,0);
+  bg.scale.setTo(640,800);
 }
