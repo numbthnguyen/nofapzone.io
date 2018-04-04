@@ -27,11 +27,13 @@ gameScene.create = function() {
   let bg = this.add.sprite(this.sys.game.config.width/2, this.sys.game.config.height/2, 'onodera');
   let boundaries = this.add.group({
   	key: 'block',
-  	repeat: 12
+  	repeat: 11
   });
 
     //  Align all of the sprites around the picture
     console.log(boundaries);
+    console.log(boundaries.getChildren());
+    console.log(boundaries.getChildren(1));
     boundaries.getChildren(1).Align.To(bg, Phaser.TOP_LEFT);
     boundaries.getChildren(2).Align.To(bg, Phaser.TOP_CENTER);
     boundaries.getChildren(3).Align.To(bg, Phaser.TOP_RIGHT);
