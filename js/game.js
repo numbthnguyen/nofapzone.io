@@ -29,6 +29,7 @@ gameScene.create = function() {
   boundaries.createMultiple(12, 'block', 0, true);
 
     //  Align all of the sprites around the picture
+    console.log(boundaries.getChildren(1));
     boundaries.getChildren(1).Align.To(bg, Phaser.TOP_LEFT);
     boundaries.getChildren(2).Align.To(bg, Phaser.TOP_CENTER);
     boundaries.getChildren(3).Align.To(bg, Phaser.TOP_RIGHT);
