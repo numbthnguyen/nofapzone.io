@@ -50,7 +50,7 @@ gameScene.create = function() {
   let boundaryBottom = this.add.group({
   	key: 'block',
   	repeat: 12,
-    setXY: { x: 16, y: this.sys.game.config.height - 16, stepY: 32 }
+    setXY: { x: 16, y: this.sys.game.config.height - 16, stepX: 32 }
   });
 
 }
