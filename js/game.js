@@ -6,6 +6,13 @@ let config = {
   type: Phaser.AUTO,  //Phaser will decide how to render our game (WebGL or Canvas)
   width: 450, // game width
   height: 700, // game height
+  physics: {
+    default: 'arcade',
+    arcade: {
+      gravity: {y: 300 },
+      debug: false
+    }
+  },
   scene: gameScene // our newly created scene
 };
 
@@ -29,21 +36,8 @@ gameScene.create = function() {
   bg.setScale(.5);
   let boundaries = this.add.group({
   	key: 'block',
-  	repeat: 11
+  	repeat: 11,
+    setXY: { x: bg.originX, y: bg.originY, stepY: 32 }
   });
 
-  //  Align all of the sprites around the picture
-  console.log(boundaries.getChildren()[0]);
-  boundaries.getChildren()[0].alignTo(bg, Phaser.TOP_LEFT);
-  boundaries.getChildren(2).Align.To(bg, Phaser.TOP_CENTER);
-  boundaries.getChildren(3).Align.To(bg, Phaser.TOP_RIGHT);
-  boundaries.getChildren(4).Align.To(bg, Phaser.LEFT_TOP);
-  boundaries.getChildren(5).Align.To(bg, Phaser.LEFT_CENTER);
-  boundaries.getChildren(6).Align.To(bg, Phaser.LEFT_BOTTOM);
-  boundaries.getChildren(7).Align.To(bg, Phaser.RIGHT_TOP);
-  boundaries.getChildren(8).Align.To(bg, Phaser.RIGHT_CENTER);
-  boundaries.getChildren(9).Align.To(bg, Phaser.RIGHT_BOTTOM);
-  boundaries.getChildren(10).Align.To(bg, Phaser.BOTTOM_LEFT);
-  boundaries.getChildren(11).Align.To(bg, Phaser.BOTTOM_CENTER);
-  boundaries.getChildren(12).Align.To(bg, Phaser.BOTTOM_RIGHT);
 }
