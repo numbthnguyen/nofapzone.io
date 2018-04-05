@@ -24,7 +24,7 @@ gameScene.preload = function() {
 gameScene.create = function() {
  
   // background
-  let bg = this.add.sprite(this.sys.game.config.width/2, this.sys.game.config.height/2, 'onodera');
+  let bg = this.add.sprite(this.sys.game.config.width/2, this.sys.game.config.height/2, 'riko');
   let boundaries = this.add.group({
   	key: 'block',
   	repeat: 11
