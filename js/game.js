@@ -4,8 +4,8 @@ let gameScene = new Phaser.Scene('Game');
 // our game's configuration
 let config = {
   type: Phaser.AUTO,  //Phaser will decide how to render our game (WebGL or Canvas)
-  width: 450, // game width
-  height: 700, // game height
+  width: 448, // game width
+  height: 704, // game height
   physics: {
     default: 'arcade',
     arcade: {
