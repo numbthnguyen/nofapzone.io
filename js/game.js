@@ -37,8 +37,8 @@ gameScene.create = function() {
   console.log(bg);
   let boundaries = this.add.group({
   	key: 'block',
-  	repeat: 11,
-    setXY: { x: bg.x, y: bg.y, stepY: 32 }
+  	repeat: 15,
+    setXY: { x: 0, y: 0, stepY: 32 }
   });
 
 }
