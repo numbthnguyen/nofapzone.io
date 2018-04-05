@@ -35,10 +35,16 @@ gameScene.create = function() {
   let bg = this.add.sprite(this.sys.game.config.width/2, this.sys.game.config.height/2, 'riko');
   bg.setScale(.5);
   console.log(bg);
-  let boundaries = this.add.group({
+  let boundaryLeft = this.add.group({
   	key: 'block',
   	repeat: 15,
-    setXY: { x: 0, y: 0, stepY: 32 }
+    setXY: { x: 32, y: 32, stepY: 32 }
+  });
+
+  let boundaryRight = this.add.group({
+  	key: 'block',
+  	repeat: 15,
+    setXY: { x: this.sys.game.config.width, y: 32, stepY: 32 }
   });
 
 }
