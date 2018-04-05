@@ -37,14 +37,20 @@ gameScene.create = function() {
   console.log(bg);
   let boundaryLeft = this.add.group({
   	key: 'block',
-  	repeat: 19,
+  	repeat: 20,
     setXY: { x: 16, y: 16, stepY: 32 }
   });
 
   let boundaryRight = this.add.group({
   	key: 'block',
-  	repeat: 19,
+  	repeat: 20,
     setXY: { x: this.sys.game.config.width - 16, y: 16, stepY: 32 }
+  });
+
+  let boundaryBottom = this.add.group({
+  	key: 'block',
+  	repeat: 12,
+    setXY: { x: 16, y: this.sys.game.config.height - 16, stepY: 32 }
   });
 
 }
