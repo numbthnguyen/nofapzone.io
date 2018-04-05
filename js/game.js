@@ -17,7 +17,7 @@ gameScene.preload = function() {
  
   // load images
   this.load.image('onodera', 'assets/onodera.jpg');
-  this.load.image('block', 'assets/32x32.png');
+  this.load.image('riko', 'assets/riko.png');
 };
  
 // executed once, after assets were loaded
