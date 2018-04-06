@@ -55,7 +55,7 @@ gameScene.create = function() {
   });
 
   let column1 = this.physics.add.staticGroup({
-      key: 'block',
+      key: 'onodera-plinko',
       repeat: 4,
       setXY: {x:80, y:80, stepY: 128}
   });
@@ -83,5 +83,6 @@ gameScene.create = function() {
   this.physics.add.collider(stars, boundaryLeft);
   this.physics.add.collider(stars, boundaryRight);
   this.physics.add.collider(stars, boundaryBottom);
+  this.physics.add.collider(stars, column1);
 
 }
