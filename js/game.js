@@ -73,7 +73,8 @@ gameScene.create = function() {
     setXY: { x: 40, y: 0, stepX: 60 }
   });
 
-  stars.body.setCircle(31);
+  console.log(stars);
+
   stars.children.iterate(function (child) {
 
     //  Give each star a slightly different bounce
