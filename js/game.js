@@ -111,6 +111,7 @@ gameScene.create = function() {
     child.setCircle(15.5);
     child.setCollideWorldBounds(true);
     child.setBounce(Phaser.Math.FloatBetween(0.4, 0.8), Phaser.Math.FloatBetween(0.4, 0.8));
+    child.setFriction(0.005);
   });
   column1.children.iterate(function (child) {
     child.setCircle(15.5);
