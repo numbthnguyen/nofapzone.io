@@ -79,13 +79,28 @@ gameScene.create = function() {
 
     //  Give each star a slightly different bounce
     child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
-    child.setCircle(31);    
+    child.setCircle(15.5);    
 
   });
 
+  column1.children.iterate(function (child) {
+
+    //  Give each star a slightly different bounce
+    child.setCircle(15.5);    
+
+  });  
+
+  column2.children.iterate(function (child) {
+
+    //  Give each star a slightly different bounce
+    child.setCircle(15.5);    
+
+  });
+  
   this.physics.add.collider(stars, boundaryLeft);
   this.physics.add.collider(stars, boundaryRight);
   this.physics.add.collider(stars, boundaryBottom);
   this.physics.add.collider(stars, column1);
+  this.physics.add.collider(stars, column2);
 
 }
