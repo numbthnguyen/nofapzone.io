@@ -60,11 +60,11 @@ gameScene.create = function() {
       setXY: {x:80, y:80, stepY: 128}
   });
 
-  // let column2 = this.physics.add.staticGroup({
-  //     key: 'block',
-  //     repeat:
-  //     setXY: {}
-  // })
+  let column2 = this.physics.add.staticGroup({
+      key: 'block',
+      repeat: 4,
+      setXY: {x:128, y:128, stepY: 96}
+  })
 
   //  Some stars to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
   let stars = this.physics.add.group({
