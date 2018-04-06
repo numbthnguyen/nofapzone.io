@@ -26,6 +26,7 @@ gameScene.preload = function() {
   this.load.image('onodera', 'assets/onodera.jpg');
   this.load.image('riko', 'assets/riko.png');
   this.load.image('block', 'assets/32x32.png');
+  this.load.image('star', 'assets/star.png');
 };
 
 // executed once, after assets were loaded
@@ -52,5 +53,23 @@ gameScene.create = function() {
   	repeat: 13,
     setXY: { x: 16, y: this.sys.game.config.height - 16, stepX: 32 }
   });
+
+  //  Some stars to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
+  let stars = this.physics.add.group({
+    key: 'star',
+    repeat: 5,
+    setXY: { x: 30, y: 0, stepX: 60 }
+  });
+
+  stars.children.iterate(function (child) {
+
+    //  Give each star a slightly different bounce
+    child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+
+  });
+
+  this.physics.add.collider(stars, boundaryLeft);
+  this.physics.add.collider(stars, boundaryRight);
+  this.physics.add.collider(stars, boundaryBottom);
 
 }
