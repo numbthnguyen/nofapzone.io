@@ -64,7 +64,37 @@ gameScene.create = function() {
       key: 'star',
       repeat: 4,
       setXY: {x:128, y:128, stepY: 96}
-  })
+  });
+
+  let column3 = this.physics.add.staticGroup({
+      key: 'star',
+      repeat: 5,
+      setXY: {x: 176, y: 80, stepY: 96}
+  });
+
+  let column4 = this.physics.add.staticGroup({
+      key: 'star',
+      repeat: 5,
+      setXY: {x: 224, y: 128, stepY: 96}
+  });
+
+  let column5 = this.physics.add.staticGroup({
+      key: 'star',
+      repeat: 5,
+      setXY: {x: 272, y: 80, stepY: 96}
+  });
+
+  let column6 = this.physics.add.staticGroup({
+      key: 'star',
+      repeat: 5,
+      setXY: {x: 320, y: 128, stepY: 96}
+  });
+
+  let column7 = this.physics.add.staticGroup({
+      key: 'star',
+      repeat: 5,
+      setXY: {x: 368, y: 80, stepY: 96}
+  });
 
   //  Some stars to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
   let stars = this.physics.add.group({
@@ -79,24 +109,24 @@ gameScene.create = function() {
 
     //  Give each star a slightly different bounce
     child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
-    child.setCircle(15.5);    
+    child.setCircle(15.5);
 
   });
 
   column1.children.iterate(function (child) {
 
     //  Give each star a slightly different bounce
-    child.setCircle(15.5);    
+    child.setCircle(15.5);
 
-  });  
+  });
 
   column2.children.iterate(function (child) {
 
     //  Give each star a slightly different bounce
-    child.setCircle(15.5);    
+    child.setCircle(15.5);
 
   });
-  
+
   this.physics.add.collider(stars, boundaryLeft);
   this.physics.add.collider(stars, boundaryRight);
   this.physics.add.collider(stars, boundaryBottom);
