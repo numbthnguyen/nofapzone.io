@@ -36,64 +36,71 @@ gameScene.create = function() {
   let bg = this.add.sprite(this.sys.game.config.width/2, this.sys.game.config.height/2, 'riko');
   bg.setScale(.5);
   console.log(bg);
-  let boundaryLeft = this.physics.add.staticGroup({
+  let boundaryLeft = this.physics.add.group({
   	key: 'block',
   	repeat: 20,
     setXY: { x: 16, y: 16, stepY: 32 }
   });
 
-  let boundaryRight = this.physics.add.staticGroup({
+  let boundaryRight = this.physics.add.group({
   	key: 'block',
   	repeat: 20,
     setXY: { x: this.sys.game.config.width - 16, y: 16, stepY: 32 }
   });
 
-  let boundaryBottom = this.physics.add.staticGroup({
+  let boundaryBottom = this.physics.add.group({
   	key: 'block',
   	repeat: 13,
     setXY: { x: 16, y: this.sys.game.config.height - 16, stepX: 32 }
   });
 
-  let column1 = this.physics.add.staticGroup({
+  let column1 = this.physics.add.group({
       key: 'star',
       repeat: 5,
-      setXY: {x:80, y:80, stepY: 96}
+      setXY: {x:80, y:80, stepY: 96},
+      immovable: true
   });
 
-  let column2 = this.physics.add.staticGroup({
+  let column2 = this.physics.add.group({
       key: 'star',
       repeat: 5,
-      setXY: {x:128, y:128, stepY: 96}
+      setXY: {x:128, y:128, stepY: 96},
+      immovable: true
   });
 
-  let column3 = this.physics.add.staticGroup({
+  let column3 = this.physics.add.group({
       key: 'star',
       repeat: 5,
-      setXY: {x: 176, y: 80, stepY: 96}
+      setXY: {x: 176, y: 80, stepY: 96},
+      immovable: true
   });
 
-  let column4 = this.physics.add.staticGroup({
+  let column4 = this.physics.add.group({
       key: 'star',
       repeat: 5,
-      setXY: {x: 224, y: 128, stepY: 96}
+      setXY: {x: 224, y: 128, stepY: 96},
+      immovable: true
   });
 
-  let column5 = this.physics.add.staticGroup({
+  let column5 = this.physics.add.group({
       key: 'star',
       repeat: 5,
-      setXY: {x: 272, y: 80, stepY: 96}
+      setXY: {x: 272, y: 80, stepY: 96},
+      immovable: true
   });
 
-  let column6 = this.physics.add.staticGroup({
+  let column6 = this.physics.add.group({
       key: 'star',
       repeat: 5,
-      setXY: {x: 320, y: 128, stepY: 96}
+      setXY: {x: 320, y: 128, stepY: 96},
+      immovable: true
   });
 
-  let column7 = this.physics.add.staticGroup({
+  let column7 = this.physics.add.group({
       key: 'star',
       repeat: 5,
-      setXY: {x: 368, y: 80, stepY: 96}
+      setXY: {x: 368, y: 80, stepY: 96},
+      immovable: true
   });
 
   //  Some stars to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
@@ -115,25 +122,31 @@ gameScene.create = function() {
   });
   column1.children.iterate(function (child) {
     child.setCircle(15.5);
+    child.setFriction(0.005);
   });
   column2.children.iterate(function (child) {
     child.setCircle(15.5);
+    child.setFriction(0.005);
   });
   column3.children.iterate(function (child) {
     child.setCircle(15.5);
+    child.setFriction(0.005);
   });
   column4.children.iterate(function (child) {
     child.setCircle(15.5);
+    child.setFriction(0.005);
   });
   column5.children.iterate(function (child) {
     child.setCircle(15.5);
+    child.setFriction(0.005);
   });
-
   column6.children.iterate(function (child) {
     child.setCircle(15.5);
+    child.setFriction(0.005);
   });
   column7.children.iterate(function (child) {
     child.setCircle(15.5);
+    child.setFriction(0.005);
   });
 
   this.physics.add.collider(stars, boundaryLeft);
@@ -147,4 +160,8 @@ gameScene.create = function() {
   this.physics.add.collider(stars, column6);
   this.physics.add.collider(stars, column7);
 
+}
+
+gameScene.update = function() {
+//  this.physics.world.collide(stars, [ static1, static2, static3 ]);
 }
