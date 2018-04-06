@@ -110,7 +110,7 @@ gameScene.create = function() {
     // child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
     child.setCircle(15.5);
     child.setCollideWorldBounds(true);
-    child.setBounce(1, 1);
+    child.setBounce(Phaser.Math.FloatBetween(0.4, 0.8), Phaser.Math.FloatBetween(0.4, 0.8));
   });
   column1.children.iterate(function (child) {
     child.setCircle(15.5);
