@@ -43,61 +43,61 @@ gameScene.create = function() {
   let bg = this.add.sprite(this.sys.game.config.width/2, this.sys.game.config.height/2, 'riko');
   bg.setScale(.5);
   console.log(bg);
-  let boundaryLeft = this.matter.add.staticGroup({
+  let boundaryLeft = this.add.staticGroup({
   	key: 'block',
   	repeat: 20,
     setXY: { x: 16, y: 16, stepY: 32 }
   });
 
-  let boundaryRight = this.matter.add.staticGroup({
+  let boundaryRight = this.add.staticGroup({
   	key: 'block',
   	repeat: 20,
     setXY: { x: this.sys.game.config.width - 16, y: 16, stepY: 32 }
   });
 
-  let boundaryBottom = this.matter.add.staticGroup({
+  let boundaryBottom = this.add.staticGroup({
   	key: 'block',
   	repeat: 13,
     setXY: { x: 16, y: this.sys.game.config.height - 16, stepX: 32 }
   });
 
-  let column1 = this.matter.add.staticGroup({
+  let column1 = this.add.staticGroup({
       key: 'star',
       repeat: 5,
       setXY: {x:80, y:80, stepY: 96}
   });
 
-  let column2 = this.matter.add.staticGroup({
+  let column2 = this.add.staticGroup({
       key: 'star',
       repeat: 5,
       setXY: {x:128, y:128, stepY: 96}
   });
 
-  let column3 = this.matter.add.staticGroup({
+  let column3 = this.add.staticGroup({
       key: 'star',
       repeat: 5,
       setXY: {x: 176, y: 80, stepY: 96}
   });
 
-  let column4 = this.matter.add.staticGroup({
+  let column4 = this.add.staticGroup({
       key: 'star',
       repeat: 5,
       setXY: {x: 224, y: 128, stepY: 96}
   });
 
-  let column5 = this.matter.add.staticGroup({
+  let column5 = this.add.staticGroup({
       key: 'star',
       repeat: 5,
       setXY: {x: 272, y: 80, stepY: 96}
   });
 
-  let column6 = this.matter.add.staticGroup({
+  let column6 = this.add.staticGroup({
       key: 'star',
       repeat: 5,
       setXY: {x: 320, y: 128, stepY: 96}
   });
 
-  let column7 = this.matter.add.staticGroup({
+  let column7 = this.add.staticGroup({
       key: 'star',
       repeat: 5,
       setXY: {x: 368, y: 80, stepY: 96}
