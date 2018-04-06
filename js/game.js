@@ -56,7 +56,7 @@ gameScene.create = function() {
 
   let column1 = this.physics.add.staticGroup({
       key: 'star',
-      repeat: 4,
+      repeat: 5,
       setXY: {x:80, y:80, stepY: 96}
   });
 
@@ -106,25 +106,31 @@ gameScene.create = function() {
   console.log(stars);
 
   stars.children.iterate(function (child) {
-
     //  Give each star a slightly different bounce
-    child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+    // child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
     child.setCircle(15.5);
-
   });
-
   column1.children.iterate(function (child) {
-
-    //  Give each star a slightly different bounce
     child.setCircle(15.5);
-
+  });
+  column2.children.iterate(function (child) {
+    child.setCircle(15.5);
+  });
+  column3.children.iterate(function (child) {
+    child.setCircle(15.5);
+  });
+  column4.children.iterate(function (child) {
+    child.setCircle(15.5);
+  });
+  column5.children.iterate(function (child) {
+    child.setCircle(15.5);
   });
 
-  column2.children.iterate(function (child) {
-
-    //  Give each star a slightly different bounce
+  column6.children.iterate(function (child) {
     child.setCircle(15.5);
-
+  });
+  column7.children.iterate(function (child) {
+    child.setCircle(15.5);
   });
 
   this.physics.add.collider(stars, boundaryLeft);
@@ -132,5 +138,10 @@ gameScene.create = function() {
   this.physics.add.collider(stars, boundaryBottom);
   this.physics.add.collider(stars, column1);
   this.physics.add.collider(stars, column2);
+  this.physics.add.collider(stars, column3);
+  this.physics.add.collider(stars, column4);
+  this.physics.add.collider(stars, column5);
+  this.physics.add.collider(stars, column6);
+  this.physics.add.collider(stars, column7);
 
 }
