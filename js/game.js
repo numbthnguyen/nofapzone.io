@@ -62,7 +62,7 @@ gameScene.create = function() {
 
   let column2 = this.physics.add.staticGroup({
       key: 'star',
-      repeat: 4,
+      repeat: 5,
       setXY: {x:128, y:128, stepY: 96}
   });
 
