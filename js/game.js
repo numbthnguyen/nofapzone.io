@@ -32,7 +32,7 @@ gameScene.preload = function() {
 gameScene.create = function() {
 
   // background
-  let bg = this.physics.add.sprite(this.sys.game.config.width/2, this.sys.game.config.height/2, 'riko');
+  let bg = this.add.sprite(this.sys.game.config.width/2, this.sys.game.config.height/2, 'riko');
   bg.setScale(.5);
   console.log(bg);
   let boundaryLeft = this.physics.add.staticGroup({
@@ -41,13 +41,13 @@ gameScene.create = function() {
     setXY: { x: 16, y: 16, stepY: 32 }
   });
 
-  let boundaryRight = this.physics.add.statusGroup({
+  let boundaryRight = this.physics.add.staticGroup({
   	key: 'block',
   	repeat: 20,
     setXY: { x: this.sys.game.config.width - 16, y: 16, stepY: 32 }
   });
 
-  let boundaryBottom = this.physics.add.statusGroup({
+  let boundaryBottom = this.physics.add.staticGroup({
   	key: 'block',
   	repeat: 13,
     setXY: { x: 16, y: this.sys.game.config.height - 16, stepX: 32 }
