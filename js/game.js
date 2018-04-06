@@ -55,7 +55,7 @@ gameScene.create = function() {
   });
 
   let column1 = this.physics.add.staticGroup({
-      key: 'onodera-plinko',
+      key: 'star',
       repeat: 4,
       setXY: {x:80, y:80, stepY: 128}
   });
