@@ -57,7 +57,7 @@ gameScene.create = function() {
   let platforms = this.physics.add.staticGroup({
       key: 'block',
       repeat: 5,
-      setXY: {x:80, y:48, stepX: 32}
+      setXY: {x:80, y:48, stepY: 128}
   });
 
   //  Some stars to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
