@@ -7,11 +7,11 @@ let config = {
   width: 448, // game width
   height: 704, // game height
   physics: {
-    default: 'arcade',
-    arcade: {
-      gravity: {y: 300 },
-      debug: false
-    }
+    default: 'matter'
+    // arcade: {
+    //   gravity: {y: 300 },
+    //   debug: false
+    // }
   },
   scene: gameScene // our newly created scene
 };
@@ -32,12 +32,12 @@ gameScene.preload = function() {
 // executed once, after assets were loaded
 gameScene.create = function() {
 
-  // Enable Box2D physics
-  this.physics.startSystem(Phaser.Physics.BOX2D);
-
-  this.physics.box2d.gravity.y = 500;
-  this.physics.box2d.setBoundsToWorld();
-  this.physics.box2d.restitution = 0.5;
+  // // Enable Box2D physics
+  // this.physics.startSystem(Phaser.Physics.BOX2D);
+  //
+  // this.physics.box2d.gravity.y = 500;
+  // this.physics.box2d.setBoundsToWorld();
+  // this.physics.box2d.restitution = 0.5;
 
   // background
   let bg = this.add.sprite(this.sys.game.config.width/2, this.sys.game.config.height/2, 'riko');
