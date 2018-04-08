@@ -42,7 +42,7 @@ gameScene.create = function() {
     setXY: { x: 16, y: 16, stepY: 32 }
   });
 
-  let boundaryRight = this.physics.add.group({
+  let boundaryRight = this.physics.add.staticGroupgroup({
   	key: 'block',
   	repeat: 20,
     setXY: { x: this.sys.game.config.width - 16, y: 16, stepY: 32 }
