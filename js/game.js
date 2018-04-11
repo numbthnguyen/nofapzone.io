@@ -36,67 +36,68 @@ gameScene.create = function() {
   let bg = this.add.sprite(this.sys.game.config.width/2, this.sys.game.config.height/2, 'riko');
   bg.setScale(.5);
   console.log(bg);
+
   let boundaryLeft = this.physics.add.group({
   	key: 'block',
   	repeat: 20,
     setXY: { x: 16, y: 16, stepY: 32 }
   });
 
-  let boundaryRight = this.physics.add.staticGroupgroup({
+  let boundaryRight = this.physics.add.staticGroup({
   	key: 'block',
   	repeat: 20,
     setXY: { x: this.sys.game.config.width - 16, y: 16, stepY: 32 }
   });
 
-  let boundaryBottom = this.physics.add.group({
+  let boundaryBottom = this.physics.add.staticGroup({
   	key: 'block',
   	repeat: 13,
     setXY: { x: 16, y: this.sys.game.config.height - 16, stepX: 32 }
   });
 
-  let column1 = this.physics.add.group({
+  let column1 = this.physics.add.staticGroup({
       key: 'star',
       repeat: 5,
       setXY: {x:80, y:80, stepY: 96},
       immovable: true
   });
 
-  let column2 = this.physics.add.group({
+  let column2 = this.physics.add.staticGroup({
       key: 'star',
       repeat: 5,
       setXY: {x:128, y:128, stepY: 96},
       immovable: true
   });
 
-  let column3 = this.physics.add.group({
+  let column3 = this.physics.add.staticGroup({
       key: 'star',
       repeat: 5,
       setXY: {x: 176, y: 80, stepY: 96},
       immovable: true
   });
 
-  let column4 = this.physics.add.group({
+  let column4 = this.physics.add.staticGroup({
       key: 'star',
       repeat: 5,
       setXY: {x: 224, y: 128, stepY: 96},
       immovable: true
   });
 
-  let column5 = this.physics.add.group({
+  let column5 = this.physics.add.staticGroup({
       key: 'star',
       repeat: 5,
       setXY: {x: 272, y: 80, stepY: 96},
       immovable: true
   });
 
-  let column6 = this.physics.add.group({
+  let column6 = this.physics.add.staticGroup({
       key: 'star',
       repeat: 5,
       setXY: {x: 320, y: 128, stepY: 96},
       immovable: true
   });
 
-  let column7 = this.physics.add.group({
+  let column7 = this.physics.add.staticGroup({
       key: 'star',
       repeat: 5,
       setXY: {x: 368, y: 80, stepY: 96},
