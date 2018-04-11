@@ -37,7 +37,7 @@ gameScene.create = function() {
   bg.setScale(.5);
   console.log(bg);
 
-  let boundaryLeft = this.physics.add.staticgroup({
+  let boundaryLeft = this.physics.add.staticGroup({
   	key: 'block',
   	repeat: 20,
     setXY: { x: 16, y: 16, stepY: 32 }
@@ -119,36 +119,36 @@ gameScene.create = function() {
     child.setCircle(15.5);
     child.setCollideWorldBounds(true);
     child.setBounce(Phaser.Math.FloatBetween(0.4, 0.8), Phaser.Math.FloatBetween(0.4, 0.8));
-    child.setFriction(0.005);
+    child.setFriction(0);
   });
-  column1.children.iterate(function (child) {
-    child.setCircle(15.5);
-    child.setFriction(0.005);
-  });
-  column2.children.iterate(function (child) {
-    child.setCircle(15.5);
-    child.setFriction(0.005);
-  });
-  column3.children.iterate(function (child) {
-    child.setCircle(15.5);
-    child.setFriction(0.005);
-  });
-  column4.children.iterate(function (child) {
-    child.setCircle(15.5);
-    child.setFriction(0.005);
-  });
-  column5.children.iterate(function (child) {
-    child.setCircle(15.5);
-    child.setFriction(0.005);
-  });
-  column6.children.iterate(function (child) {
-    child.setCircle(15.5);
-    child.setFriction(0.005);
-  });
-  column7.children.iterate(function (child) {
-    child.setCircle(15.5);
-    child.setFriction(0.005);
-  });
+  // column1.children.iterate(function (child) {
+  //   child.setCircle(15.5);
+  //   child.setFriction(0.005);
+  // });
+  // column2.children.iterate(function (child) {
+  //   child.setCircle(15.5);
+  //   child.setFriction(0.005);
+  // });
+  // column3.children.iterate(function (child) {
+  //   child.setCircle(15.5);
+  //   child.setFriction(0.005);
+  // });
+  // column4.children.iterate(function (child) {
+  //   child.setCircle(15.5);
+  //   child.setFriction(0.005);
+  // });
+  // column5.children.iterate(function (child) {
+  //   child.setCircle(15.5);
+  //   child.setFriction(0.005);
+  // });
+  // column6.children.iterate(function (child) {
+  //   child.setCircle(15.5);
+  //   child.setFriction(0.005);
+  // });
+  // column7.children.iterate(function (child) {
+  //   child.setCircle(15.5);
+  //   child.setFriction(0.005);
+  // });
 
   this.physics.add.collider(stars, boundaryLeft);
   this.physics.add.collider(stars, boundaryRight);
