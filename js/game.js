@@ -37,7 +37,7 @@ gameScene.create = function() {
   bg.setScale(.5);
   console.log(bg);
 
-  let boundaryLeft = this.physics.add.group({
+  let boundaryLeft = this.physics.add.staticgroup({
   	key: 'block',
   	repeat: 20,
     setXY: { x: 16, y: 16, stepY: 32 }
